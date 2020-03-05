@@ -231,11 +231,6 @@ public class MyStorePortalPage {
     }
 
 
-    public void waitForElementVisible(String elementLocator, int timesecs) {
-        WebElement element = (new WebDriverWait(driver, timesecs))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(elementLocator)));
-    }
-
     public void selectMostExpensiveDress() {
         List<Float> prices = new ArrayList<Float>();
         for (WebElement element : pricesElements) {
